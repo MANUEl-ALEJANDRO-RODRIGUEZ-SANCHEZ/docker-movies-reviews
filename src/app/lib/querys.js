@@ -66,3 +66,29 @@ export const getAllReviews = async () => {
         return false;
     }
 };
+
+export const addReview = async (newReview) => {
+    const { user, movie, movieId, rating, comment, date } = newReview;
+    try {
+        const res = await fetch("http://localhost:4000/reviews", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                user,
+                movie,
+                movieId,
+                rating,
+                comment,
+                date,
+            }),
+        });
+
+        if (!res.ok || res.status === 500 || res.status === 401)
+            throw new Error("Error al crear una reseña");
+
+        return true;
+    } catch (err) {
+        console.error("Review error:", err.message);
+        return false;
+    }
+};

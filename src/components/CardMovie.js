@@ -3,10 +3,15 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ModalDetailsMovie from "./ModalDetailsMovie";
+import ModalComment from "./ModalComment";
 
 const CardMovie = ({ movie }) => {
     const [imgSrc, setImgSrc] = useState(movie.image || "/logo.svg");
     const [isVisibleModalDetails, setIsVisibleModalDetails] = useState(false);
+    const [isVisibleModalComment, setIsVisibleModalComment] = useState(false);
+
+    const addComment = async () => {};
+
     return (
         <>
             <div
@@ -51,6 +56,12 @@ const CardMovie = ({ movie }) => {
                             <button className="bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm hover:cursor-pointer">
                                 + Watchlist
                             </button>
+                            <button
+                                className="bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm hover:cursor-pointer"
+                                onClick={() => setIsVisibleModalComment(true)}
+                            >
+                                Comentar
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -59,6 +70,12 @@ const CardMovie = ({ movie }) => {
             <ModalDetailsMovie
                 isVisible={isVisibleModalDetails}
                 onClose={() => setIsVisibleModalDetails(false)}
+                movie={movie}
+            />
+
+            <ModalComment
+                isVisible={isVisibleModalComment}
+                onClose={() => setIsVisibleModalComment(false)}
                 movie={movie}
             />
         </>

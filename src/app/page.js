@@ -5,6 +5,7 @@ import Image from "next/image";
 import { registerUser, loginUser } from "./lib/querys";
 import ModalLogin from "@/components/ModalLogin";
 import { useRouter } from "next/navigation";
+import { setUser } from "./lib/context";
 
 const initialStateFormRegister = {
     name: "",
@@ -48,6 +49,7 @@ export default function Login() {
     async function logIn() {
         let query = await loginUser(formLogin);
         if (query === true) {
+            setUser(formLogin.email);
             router.push("/home");
         } else {
             setModalDetails({

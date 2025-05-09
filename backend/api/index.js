@@ -123,10 +123,10 @@ app.get("/reviews/:id", (req, res) => {
 
 // Create review
 app.post("/reviews", (req, res) => {
-    const { user, movie, movieId, comment, date } = req.body;
+    const { user, movie, movieId, rating, comment, date } = req.body;
     db.query(
-        "INSERT INTO reviews (user, movie, movieId, comment, date) VALUES (?, ?, ?, ?, ?)",
-        [user, movie, movieId, comment, date],
+        "INSERT INTO reviews (user, movie, movieId, rating, comment, date) VALUES (?, ?, ?, ?, ?, ?)",
+        [user, movie, movieId, rating, comment, date],
         (err, result) => {
             if (err) return res.status(500).json({ error: err.message });
             res.status(201).json({
@@ -134,6 +134,7 @@ app.post("/reviews", (req, res) => {
                 user,
                 movie,
                 movieId,
+                rating,
                 comment,
                 date,
             });
