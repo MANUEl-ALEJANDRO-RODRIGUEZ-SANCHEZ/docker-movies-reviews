@@ -74,6 +74,26 @@ npm run dev
 
 4. Abrir el proyecto en el navegador [http://localhost:3000](http://localhost:3000)
 
+## Ejecución
+
+![image](https://github.com/user-attachments/assets/a7b44917-ebb3-4517-bfac-24c420dc6f14)
+
+![image](https://github.com/user-attachments/assets/d799903d-27a3-4b53-a0a9-7937b9f5f2f6)
+
+![image](https://github.com/user-attachments/assets/d68b58e8-ba1a-457c-9df0-85927cfa2cb1)
+
+![image](https://github.com/user-attachments/assets/274eeaab-c4b2-4ec8-8cc3-b384f9266b39)
+
+![image](https://github.com/user-attachments/assets/d2ac326e-64b0-4d9a-bbc1-1b9b76928cff)
+
+![image](https://github.com/user-attachments/assets/09dd8ac1-1eca-47a9-9de0-f1d029592b9c)
+
+![image](https://github.com/user-attachments/assets/31473c35-423f-4d24-b464-e0a1c127c768)
+
+![image](https://github.com/user-attachments/assets/debe327c-5744-444e-8e55-65d8b00e0245)
+
+![image](https://github.com/user-attachments/assets/bdd686c9-447b-4360-bff9-d3d727ca85e9)
+
 ## 👨‍💻 Autor
 
 Manuel Alejandro Rodriguez Sanchez
